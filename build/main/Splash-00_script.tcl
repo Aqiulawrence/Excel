@@ -23,7 +23,7 @@ set status_text [string range $cmd $first $last]
 }
 set server_socket [socket -server _ipc_server -myaddr localhost 0]
 set server_port [fconfigure $server_socket -sockname]
-set env(_PYIBoot_SPLASH) [lindex $server_port 2]
+set env(_PYI_SPLASH_IPC) [lindex $server_port 2]
 image create photo splash_image
 splash_image put $_image_data
 unset _image_data
